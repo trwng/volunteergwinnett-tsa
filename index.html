@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunteerGwinnett - TSA Webmaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- header stuff -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="logo-title">VolunteerGwinnett</h1>
+                    <div class="location">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Gwinnett County</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#discover">Discover</a>
+                <a href="#about">About</a>
+                <a href="#organizations" class="nav-button">For Orgs</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- big hero thing -->
+    <section class="hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <div class="hero-content">
+            <span class="hero-badge">
+                <svg class="sparkles-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"></path>
+                </svg>
+                Connecting Gwinnett County Together
+            </span>
+            
+            <h1 class="hero-title">
+                Volunteering Made <span class="hero-highlight">Easier than Ever</span>
+            </h1>
+            
+            <p class="hero-description">
+                Volunteers made easy by just swiping and seeing what you'd like! 
+                <span class="hero-accent">Make a difference!</span>
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#discover" class="btn-primary">Start Swiping →</a>
+                <a href="#about" class="btn-secondary">How It Works</a>
+            </div>
+            
+            <!-- stats -->
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-icon stat-icon-1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <p class="stat-value">2,500+</p>
+                    <p class="stat-label">Volunteers</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon stat-icon-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <p class="stat-value">150+</p>
+                    <p class="stat-label">Monthly Events</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon stat-icon-3">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <p class="stat-value">45+</p>
+                    <p class="stat-label">Organizations</p>
+                </div>
+            </div>
+            
+            <a href="#discover" class="scroll-indicator">
+                <span>Discover Opportunities</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- swipe section -->
+    <section id="discover" class="discover">
+        <div class="discover-container">
+            <div class="section-header">
+                <span class="section-badge">✨ Ready to Volunteer?</span>
+                <h2 class="section-title">Discover Opportunities</h2>
+                <p class="section-description">Swipe right on opportunities you're interested in, or left to skip. It's that simple!</p>
+            </div>
+
+            <div class="swipe-container">
+                <div id="cardStack" class="card-stack">
+                    <!-- cards go here -->
+                </div>
+                
+                <div id="endScreen" class="end-screen" style="display: none;">
+                    <div class="end-screen-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3>You've seen all opportunities!</h3>
+                    <p id="matchCount">You matched with 0 volunteer opportunities</p>
+                    <button id="resetBtn" class="btn-reset">Start Over</button>
+                </div>
+            </div>
+
+            <div id="swipeButtons" class="swipe-buttons">
+                <button id="rejectBtn" class="swipe-btn reject-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <button id="undoBtn" class="swipe-btn undo-btn" style="display: none;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="1 4 1 10 7 10"></polyline>
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                    </svg>
+                </button>
+                <button id="acceptBtn" class="swipe-btn accept-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="matchBadge" class="match-badge" style="display: none;">
+                💚 <span id="matchCountBadge">0</span> matches
+            </div>
+        </div>
+    </section>
+
+    <!-- how it works -->
+    <section id="about" class="how-it-works">
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+        
+        <div class="how-container">
+            <div class="section-header">
+                <span class="section-badge-accent">How It Works</span>
+                <h2 class="section-title">Making Volunteering <span class="section-highlight">Simple</span></h2>
+                <p class="section-description-small">Our swipe-based system makes finding volunteer opportunities super easy!</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-icon step-icon-1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3>Browse</h3>
+                    <p>Swipe through curated volunteer opportunities.</p>
+                </div>
+
+                <div class="step-card step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-icon step-icon-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3>Match</h3>
+                    <p>Swipe right on opportunities that interest you.</p>
+                </div>
+
+                <div class="step-card step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-icon step-icon-3">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>Sign Up</h3>
+                    <p>Register for events and make a difference.</p>
+                </div>
+
+                <div class="step-card step-4">
+                    <div class="step-number">4</div>
+                    <div class="step-icon step-icon-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Track</h3>
+                    <p>Log hours and see your positive impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>VolunteerGwinnett</h3>
+                        <div class="footer-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Gwinnett County, GA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#">idk</a>
+                    <a href="#">idk</a>
+                    <a href="#">idk</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Tara Wang</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
