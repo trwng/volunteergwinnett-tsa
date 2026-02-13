@@ -3,129 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolunteerGwinnett</title>
+    <title>VolunteerGwinnett — Gwinnett County Community Resource Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">VolunteerGwinnett</div>
-        <nav class="nav">
-            <a href="#" onclick="showPage('home')" class="nav-link active">Home</a>
-            <a href="#" onclick="showPage('discover')" class="nav-link">Discover</a>
-            <a href="#" onclick="showPage('about')" class="nav-link">About</a>
-            <a href="#" onclick="showPage('impact')" class="nav-link">Impact</a>
-            <a href="#" onclick="showPage('contact')" class="nav-link cta">Get Started</a>
+
+<header class="header">
+    <div class="header-inner">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            VolunteerGwinnett
+        </div>
+        <nav>
+            <a class="nav-link active" data-target="home">Home</a>
+            <a class="nav-link" data-target="resources">Resource Hub</a>
+            <a class="nav-link" data-target="discover">Discover</a>
+            <a class="nav-link" data-target="impact">Our Impact</a>
+            <a class="nav-link" data-target="submit">Submit a Resource</a>
+            <a class="nav-link nav-cta" data-target="contact">Get Involved</a>
         </nav>
-    </header>
+        <button class="hamburger" id="hamburger">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+        <a class="nav-link" data-target="home">Home</a>
+        <a class="nav-link" data-target="resources">Resource Hub</a>
+        <a class="nav-link" data-target="discover">Discover</a>
+        <a class="nav-link" data-target="impact">Our Impact</a>
+        <a class="nav-link" data-target="submit">Submit a Resource</a>
+        <a class="nav-link" data-target="contact">Get Involved</a>
+    </div>
+</header>
 
-    <!-- HOME -->
-    <div id="page-home" class="page active">
-        <section class="hero">
-            <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=2000')"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">SWIPE RIGHT<br><span class="yellow">CHANGE LIVES</span></h1>
-                <p class="hero-sub">Think Tinder, but for doing good</p>
-                <button onclick="showPage('discover')" class="hero-btn">START BROWSING →</button>
+<!-- ===================== HOME ===================== -->
+<div id="page-home" class="page active">
+
+    <section class="hero">
+        <canvas id="particles"></canvas>
+        <div class="hero-inner">
+            <span class="hero-pill">Gwinnett County Community Resource Hub</span>
+            <h1>Swipe Right to <span class="yellow">Change Lives</span></h1>
+            <p>Think Tinder, but for doing good. Browse volunteer opportunities and community resources that actually fit your life — no pressure, just possibilities.</p>
+            <div class="hero-btns">
+                <button class="btn-white" data-target="resources">Explore Resources</button>
+                <button class="btn-outline" data-target="discover">Start Swiping</button>
             </div>
-        </section>
-
-        <section class="split">
-            <div class="split-img" style="background-image:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1000')"></div>
-            <div class="split-text">
-                <span class="big-01">01</span>
-                <h2>Real Impact,<br>Real Simple</h2>
-                <p>Volunteering makes you feel better, helps you meet cool people, and makes Gwinnett not suck.</p>
-            </div>
-        </section>
-
-        <section class="quote">
-            <div class="quote-bg" style="background-image:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=2000')"></div>
-            <h2>We've forgotten what it means to be <em>present</em><br>without being seen. <span class="underline">This is a reminder.</span></h2>
-        </section>
-
-        <section class="numbers">
-            <div class="num-box"><div class="num">15K+</div><p>Hours</p></div>
-            <div class="num-box highlight"><div class="num">500+</div><p>Families</p></div>
-            <div class="num-box"><div class="num">12</div><p>Parks</p></div>
-        </section>
-
-        <section class="cards">
-            <h2 class="cards-h">WHAT'S<br>HAPPENING<br><span class="purple">SOON</span></h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600')"></div>
-                    <h3>Food Bank</h3>
-                    <p>Feb 15 • 12 spots</p>
+            <div class="hero-stats">
+                <div class="hstat">
+                    <div class="hstat-n">2,500+</div>
+                    <div class="hstat-l">Volunteers</div>
                 </div>
-                <div class="card">
-                    <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600')"></div>
-                    <h3>Tree Planting</h3>
-                    <p>Feb 22 • 8 spots</p>
+                <div class="hstat">
+                    <div class="hstat-n">45+</div>
+                    <div class="hstat-l">Organizations</div>
                 </div>
-                <div class="card">
-                    <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600')"></div>
-                    <h3>Tutoring</h3>
-                    <p>Every Tue • 5 spots</p>
+                <div class="hstat">
+                    <div class="hstat-n">150+</div>
+                    <div class="hstat-l">Monthly Events</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="cta">
-            <h2>READY TO<br><span class="yellow">MAKE A DIFFERENCE?</span></h2>
-            <button onclick="showPage('discover')">START BROWSING →</button>
-        </section>
+    <!-- Spotlight 3 Resources -->
+    <section class="spotlight">
+        <div class="wrap">
+            <div class="section-label">⭐ SPOTLIGHTED RESOURCES</div>
+            <h2>Resources You Should Know About</h2>
+            <p class="section-sub">Three organizations making a huge difference in Gwinnett County right now</p>
+            <div class="spotlight-grid">
+                <div class="spot-card">
+                    <div class="spot-img" style="background-image:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&h=500&fit=crop')">
+                        <span class="spot-category">Food Security</span>
+                    </div>
+                    <div class="spot-body">
+                        <h3>Gwinnett County Food Bank</h3>
+                        <p>Providing food assistance to over 700 families each week. They run sorting drives, mobile pantries, and holiday meal programs throughout the county.</p>
+                        <div class="spot-meta">
+                            <span>📍 Lawrenceville, GA</span>
+                            <span>📞 (770) 963-6986</span>
+                        </div>
+                        <button class="spot-btn" data-target="resources">Learn More →</button>
+                    </div>
+                </div>
+                <div class="spot-card">
+                    <div class="spot-img" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=500&fit=crop')">
+                        <span class="spot-category">Education</span>
+                    </div>
+                    <div class="spot-body">
+                        <h3>Gwinnett Public Library</h3>
+                        <p>Free tutoring, digital literacy classes, ESL programs, and after-school support for students K-12. More than just books — it's a community learning hub.</p>
+                        <div class="spot-meta">
+                            <span>📍 Multiple locations</span>
+                            <span>🌐 gwinnettpl.org</span>
+                        </div>
+                        <button class="spot-btn" data-target="resources">Learn More →</button>
+                    </div>
+                </div>
+                <div class="spot-card">
+                    <div class="spot-img" style="background-image:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=500&fit=crop')">
+                        <span class="spot-category">Environment</span>
+                    </div>
+                    <div class="spot-body">
+                        <h3>Keep Gwinnett Beautiful</h3>
+                        <p>Beautifying parks, waterways, and neighborhoods through volunteer cleanups, tree plantings, and environmental education. Zero cost to join.</p>
+                        <div class="spot-meta">
+                            <span>📍 Gwinnett-wide</span>
+                            <span>🌐 keepgwinnettbeautiful.org</span>
+                        </div>
+                        <button class="spot-btn" data-target="resources">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live activity map -->
+    <section class="map-section">
+        <div class="wrap">
+            <div class="section-label">🔴 LIVE ACTIVITY</div>
+            <h2>Volunteering Happening Right Now</h2>
+            <p class="section-sub">Watch real volunteers making a difference across Gwinnett County</p>
+            <div class="map-layout">
+                <div class="map-box">
+                    <svg viewBox="0 0 600 400">
+                        <path d="M50 150 L150 100 L250 80 L350 100 L450 120 L500 180 L480 280 L400 320 L300 340 L200 330 L100 300 L50 230Z"
+                            fill="#EEF2FF" stroke="#4F46E5" stroke-width="3"/>
+                        <circle class="pdot" cx="150" cy="180" r="8"/><text x="158" y="184" class="maplabel">Lawrenceville</text>
+                        <circle class="pdot" cx="280" cy="160" r="8" style="animation-delay:.3s"/><text x="288" y="164" class="maplabel">Duluth</text>
+                        <circle class="pdot" cx="350" cy="200" r="8" style="animation-delay:.6s"/><text x="358" y="204" class="maplabel">Suwanee</text>
+                        <circle class="pdot" cx="220" cy="240" r="8" style="animation-delay:.9s"/><text x="228" y="244" class="maplabel">Norcross</text>
+                        <circle class="pdot" cx="400" cy="220" r="8" style="animation-delay:1.2s"/><text x="408" y="224" class="maplabel">Buford</text>
+                        <circle class="pdot" cx="180" cy="280" r="8" style="animation-delay:1.5s"/><text x="188" y="284" class="maplabel">Lilburn</text>
+                    </svg>
+                </div>
+                <div class="feed-box">
+                    <div class="feed-top"><h3>Recent Activity</h3><span class="live-badge">● LIVE</span></div>
+                    <div id="activityFeed"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Draggable preview cards -->
+    <section class="drag-section">
+        <div class="wrap">
+            <div class="section-label">⚡ TRY IT OUT</div>
+            <h2>Drag These Cards Around</h2>
+            <p class="section-sub">Get a feel for how Discover works — drag left to skip, right to save</p>
+            <div class="drag-grid" id="dragGrid">
+                <div class="drag-card" data-orig="0">
+                    <div class="drag-img" style="background-image:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?w=500')"></div>
+                    <div class="drag-info"><h3>Food Bank Sorting</h3><p>Feb 15 • 3 hrs</p></div>
+                </div>
+                <div class="drag-card" data-orig="1">
+                    <div class="drag-img" style="background-image:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500')"></div>
+                    <div class="drag-info"><h3>Tree Planting</h3><p>Feb 22 • 3 hrs</p></div>
+                </div>
+                <div class="drag-card" data-orig="2">
+                    <div class="drag-img" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500')"></div>
+                    <div class="drag-info"><h3>After-School Tutoring</h3><p>Every Tue • 2 hrs</p></div>
+                </div>
+            </div>
+            <p class="drag-hint">👆 Drag the cards! <button class="try-btn" data-target="discover">Try the Real Swiper →</button></p>
+        </div>
+    </section>
+
+    <!-- Counters -->
+    <section class="counters">
+        <div class="counter-wrap">
+            <div class="ctr"><div class="ctr-n" data-to="15000">0</div><div class="ctr-l">Hours Volunteered</div><div class="ctr-s">that's 2 years straight</div></div>
+            <div class="ctr accent"><div class="ctr-n" data-to="500">0</div><div class="ctr-l">Families Helped</div><div class="ctr-s">real impact, real people</div></div>
+            <div class="ctr"><div class="ctr-n" data-to="45">0</div><div class="ctr-l">Partner Orgs</div><div class="ctr-s">all verified partners</div></div>
+        </div>
+    </section>
+
+</div>
+
+<!-- ===================== RESOURCE HUB ===================== -->
+<div id="page-resources" class="page">
+    <div class="page-top">
+        <div class="section-label">📚 COMMUNITY RESOURCE HUB</div>
+        <h1>Find Resources in Gwinnett</h1>
+        <p>Search and filter 45+ verified community organizations, support services, and programs</p>
     </div>
 
-    <!-- DISCOVER -->
-    <div id="page-discover" class="page">
-        <h1 class="page-h">DISCOVER</h1>
-        <div class="swipe-container">
-            <div id="cardStack" class="stack"></div>
-            <div id="endScreen" style="display:none">
-                <p id="matchCount">Done!</p>
-                <button id="resetBtn">Reset</button>
-            </div>
-            <div id="swipeButtons" class="btns">
-                <button id="rejectBtn">✕</button>
-                <button id="undoBtn" style="display:none">↻</button>
-                <button id="acceptBtn">♥</button>
-            </div>
-            <div id="matchBadge" style="display:none"><span id="matchCountBadge">0</span> matches</div>
+    <!-- search + filter bar -->
+    <div class="hub-controls wrap">
+        <input type="text" id="searchInput" class="hub-search" placeholder="🔍  Search by name, category, or location...">
+        <div class="filter-row" id="filterRow">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Food">🍽 Food</button>
+            <button class="filter-btn" data-filter="Education">📚 Education</button>
+            <button class="filter-btn" data-filter="Environment">🌱 Environment</button>
+            <button class="filter-btn" data-filter="Housing">🏠 Housing</button>
+            <button class="filter-btn" data-filter="Health">❤️ Health</button>
+            <button class="filter-btn" data-filter="Youth">👦 Youth</button>
+            <button class="filter-btn" data-filter="Seniors">👴 Seniors</button>
         </div>
     </div>
 
-    <!-- ABOUT -->
-    <div id="page-about" class="page">
-        <h1 class="page-h">HOW IT WORKS</h1>
-        <div class="steps">
-            <div><h3>1. Browse</h3><p>See what's happening</p></div>
-            <div><h3>2. Swipe</h3><p>Right if interested</p></div>
-            <div><h3>3. Show Up</h3><p>Actually go</p></div>
-            <div><h3>4. Track</h3><p>See your impact</p></div>
+    <div class="resource-grid wrap" id="resourceGrid"></div>
+    <p class="no-results" id="noResults" style="display:none">No resources match your search. Try different keywords!</p>
+</div>
+
+<!-- ===================== DISCOVER (SWIPE) ===================== -->
+<div id="page-discover" class="page">
+    <div class="page-top">
+        <div class="section-label">✨ SWIPE TO MATCH</div>
+        <h1>Discover Opportunities</h1>
+        <p>Swipe right if you're interested, left to skip. Your matches get saved!</p>
+    </div>
+    <div class="swipe-wrap">
+        <div id="cardStack" class="stack"></div>
+        <div id="endScreen" class="end-screen" style="display:none">
+            <div style="font-size:60px;margin-bottom:16px">🎉</div>
+            <h3>You've seen everything!</h3>
+            <p id="matchCountTxt">You matched with 0 opportunities</p>
+            <button id="resetBtn" class="btn-primary-sm">Browse Again</button>
+        </div>
+        <div id="swipeBtns" class="swipe-btns">
+            <button id="rejectBtn" class="sbtn no">✕</button>
+            <button id="undoBtn" class="sbtn undo" style="display:none">↻</button>
+            <button id="acceptBtn" class="sbtn yes">♥</button>
+        </div>
+        <div id="matchBadge" class="match-badge" style="display:none">
+            💚 <span id="matchNum">0</span> matches so far
         </div>
     </div>
+</div>
 
-    <!-- IMPACT -->
-    <div id="page-impact" class="page">
-        <h1 class="page-h">THE NUMBERS</h1>
-        <div class="stats">
-            <div><h2>15,000+</h2><p>Hours</p></div>
-            <div><h2>500+</h2><p>Families</p></div>
-            <div><h2>12</h2><p>Parks</p></div>
+<!-- ===================== IMPACT ===================== -->
+<div id="page-impact" class="page">
+    <div class="page-top">
+        <div class="section-label">💚 THE NUMBERS</div>
+        <h1>Real Impact, Real People</h1>
+        <p>No fluff. Just what actually happened when people showed up.</p>
+    </div>
+    <div class="impact-nums wrap">
+        <div class="impn"><div class="impn-num">15,000+</div><div class="impn-label">Hours Volunteered</div></div>
+        <div class="impn accent"><div class="impn-num">700+</div><div class="impn-label">Families Fed Weekly</div></div>
+        <div class="impn"><div class="impn-num">12</div><div class="impn-label">Parks Cleaned</div></div>
+    </div>
+    <div class="testimonials wrap">
+        <h2>What People Are Saying</h2>
+        <div class="tgrid">
+            <div class="tcard">"Honestly thought I'd hate waking up early on a Saturday, but the tree planting was actually fun? Plus free coffee." <span>— Sarah M.</span></div>
+            <div class="tcard">"The swipe thing is lowkey genius. Found something in 2 minutes that I've been doing every week for a year." <span>— James L.</span></div>
+            <div class="tcard">"Met my best friend at a food bank event. Also helped 200+ families. Win-win." <span>— Maria G.</span></div>
         </div>
     </div>
+    <div class="about-org wrap">
+        <h2>About VolunteerGwinnett</h2>
+        <div class="about-grid">
+            <div class="about-card"><h3>🤝 Our Mission</h3><p>We connect Gwinnett County residents with volunteer opportunities and community resources that actually match their schedule and interests. No guilt trips, no pressure.</p></div>
+            <div class="about-card"><h3>💡 Why We Built This</h3><p>Finding volunteer opportunities shouldn't be harder than finding a date. So we made it as easy as swiping right.</p></div>
+            <div class="about-card"><h3>📍 Our Community</h3><p>We're local to Gwinnett — that's the whole point. Every organization on our platform is verified and based right here in the county.</p></div>
+        </div>
+    </div>
+</div>
 
-    <!-- CONTACT -->
-    <div id="page-contact" class="page">
-        <h1 class="page-h">GET STARTED</h1>
-        <form id="contactForm" class="form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="5"></textarea>
-            <button type="submit">SEND →</button>
+<!-- ===================== SUBMIT A RESOURCE ===================== -->
+<div id="page-submit" class="page">
+    <div class="page-top">
+        <div class="section-label">➕ ADD A RESOURCE</div>
+        <h1>Know a Resource We're Missing?</h1>
+        <p>Submit it here and we'll review it within 48 hours. Help us keep the hub complete.</p>
+    </div>
+    <div class="submit-wrap wrap">
+        <form id="submitForm" class="submit-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Organization Name *</label>
+                    <input type="text" placeholder="e.g. Gwinnett County Food Bank" required>
+                </div>
+                <div class="form-group">
+                    <label>Category *</label>
+                    <select required>
+                        <option value="">Choose a category...</option>
+                        <option>Food</option>
+                        <option>Education</option>
+                        <option>Environment</option>
+                        <option>Housing</option>
+                        <option>Health</option>
+                        <option>Youth</option>
+                        <option>Seniors</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Website</label>
+                    <input type="url" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="(770) 000-0000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Address / Location *</label>
+                <input type="text" placeholder="City, GA or full address" required>
+            </div>
+            <div class="form-group">
+                <label>Describe what this organization does *</label>
+                <textarea placeholder="What services do they provide? Who do they help? What can volunteers expect?" rows="5" required></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="So we can credit you">
+                </div>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="In case we have questions">
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit Resource →</button>
         </form>
+        <div id="submitSuccess" class="submit-success" style="display:none">
+            <div class="success-icon">✅</div>
+            <h3>Got it! Thanks for contributing.</h3>
+            <p>We'll review your submission and add it to the hub within 48 hours. You're helping make Gwinnett better.</p>
+            <button onclick="document.getElementById('submitSuccess').style.display='none'; document.getElementById('submitForm').style.display='block'; document.getElementById('submitForm').reset();" class="btn-primary-sm">Submit Another</button>
+        </div>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<!-- ===================== CONTACT ===================== -->
+<div id="page-contact" class="page">
+    <div class="page-top">
+        <div class="section-label">👋 GET INVOLVED</div>
+        <h1>Ready to Make a Difference?</h1>
+        <p>Whether you want to volunteer, partner with us, or just say hi — we actually read these.</p>
+    </div>
+    <div class="contact-layout wrap">
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label>What should we call you?</label>
+                <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label>Where can we reach you?</label>
+                <input type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label>What brings you here?</label>
+                <select>
+                    <option>I want to volunteer</option>
+                    <option>I represent an organization</option>
+                    <option>I have feedback or ideas</option>
+                    <option>Something's broken</option>
+                    <option>Just saying hi 👋</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What's on your mind?</label>
+                <textarea placeholder="Tell us what's up..." rows="5"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send It →</button>
+        </form>
+        <div class="contact-info">
+            <h3>Quick FAQs</h3>
+            <div class="faq"><strong>Is this free?</strong><p>Yep. Always will be.</p></div>
+            <div class="faq"><strong>Do I need to commit long-term?</strong><p>Nope. One-time events are totally fine.</p></div>
+            <div class="faq"><strong>Can I bring friends?</strong><p>Please do! Most events love groups.</p></div>
+            <div class="faq"><strong>How do I add my org?</strong><p>Use the "Submit a Resource" tab — it takes 2 minutes.</p></div>
+            <div class="contact-details">
+                <p>📧 hello@volunteergwinnett.org</p>
+                <p>📍 Gwinnett County, GA</p>
+                <p>⏰ Mon–Fri, 9am–5pm EST</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 VolunteerGwinnett — Building Gwinnett County together 💚</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
+</html>
 </html>
